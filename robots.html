@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Real, field-proven robots suited to supermarket shelf-stocking and store operations — a reference fleet survey by Gentoo RX."
+    />
+    <title>The Robot Fleet | Gentoo RX</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 130'%3E%3Cpath d='M52 8C58 8 65 12 68 20L84 23.5 65.5 25.5C67.5 32 69.5 39 71 46 76 58 79 68 78.5 78 78 88 75 96 71 103 68 109 66 113 62.5 116.5 61 118.5 60 119.5 58.5 120 53 122 47 122 41.5 120 39 118.8 37 116.5 35 114.5 30 108 26.5 102 24.5 95.5 22 87.5 20.5 80 20.5 72.5 20.5 64.5 22.5 57 24.5 50 27.5 40.5 31.5 31.5 35 23 37.5 17 41 12.5 45 10 47 8.8 49.5 8 52 8Z' fill='none' stroke='%232f3bdb' stroke-width='5'/%3E%3Ccircle cx='62.5' cy='16.5' r='2.6' fill='%232f3bdb'/%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600&family=Caveat:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=10" />
+  </head>
+  <!--
+    NOTE: This "reference fleet" page is intentionally self-contained and slated
+    for future removal. To remove it: delete robots.html and the two links to it
+    (header nav + fleet CTA section) in index.html.
+  -->
+  <body>
+    <div class="bg-grid" aria-hidden="true"></div>
+
+    <header class="site-header" data-header>
+      <a class="brand" href="index.html" aria-label="Gentoo RX Inc home">
+        <svg class="brand-penguin" viewBox="0 0 100 130" aria-hidden="true">
+          <path
+            d="M52 8C58 8 65 12 68 20L84 23.5 65.5 25.5C67.5 32 69.5 39 71 46 76 58 79 68 78.5 78 78 88 75 96 71 103 68 109 66 113 62.5 116.5 61 118.5 60 119.5 58.5 120 53 122 47 122 41.5 120 39 118.8 37 116.5 35 114.5 30 108 26.5 102 24.5 95.5 22 87.5 20.5 80 20.5 72.5 20.5 64.5 22.5 57 24.5 50 27.5 40.5 31.5 31.5 35 23 37.5 17 41 12.5 45 10 47 8.8 49.5 8 52 8Z"
+          />
+          <path class="wing" d="M43.5 34.5C37 48 32.5 62 31 80 30.5 91 33.5 100 41 110" />
+          <circle class="eye" cx="62.5" cy="16.5" r="2.6" />
+          <path class="belly" d="M64 31C68 38 70.5 46 71 55 72 63 72.5 70 72.5 77 72.5 85 70.5 92.5 67.5 99.5 65.5 104.5 63 109 59.5 113.5" />
+        </svg>
+        <span class="brand-text">
+          <strong>GENTOO <em>RX</em></strong>
+          <small>R&thinsp;o&thinsp;b&thinsp;o&thinsp;t&thinsp;i&thinsp;c&thinsp;s</small>
+        </span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="index.html#system">The System</a>
+        <a href="index.html#model">Model</a>
+        <a href="index.html#why">Why</a>
+        <a href="robots.html" aria-current="page">Fleet</a>
+      </nav>
+
+      <a class="nav-cta" href="index.html#contact">Contact&nbsp;us</a>
+    </header>
+
+    <main>
+      <section class="subpage-hero" aria-labelledby="fleet-page-title">
+        <div class="section-inner">
+          <p class="section-kicker" data-reveal>Reference fleet</p>
+          <h1 id="fleet-page-title" data-reveal data-delay="1">
+            Real robots,<br />ready for the <span class="grad grad-blue">aisle</span>.
+          </h1>
+          <p class="subpage-lede" data-reveal data-delay="2">
+            The hardware for robotic shelf work isn't science fiction — it's
+            already rolling through real stores and warehouses. A survey of
+            existing, field-proven machines that fit the Gentoo RX operating
+            model.
+          </p>
+          <p class="fleet-note" data-reveal data-delay="3">
+            <span aria-hidden="true">ⓘ</span>
+            These robots are built and owned by independent manufacturers, shown
+            here for reference only. Gentoo RX is not affiliated with or endorsed
+            by any of them. Images are loaded from their public sources, credited below each card.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" aria-label="Robot models">
+        <div class="section-inner">
+          <div class="robot-grid">
+            <article class="robot-card" data-reveal data-tilt>
+              <div class="robot-photo">
+                <span class="badge">Shelf stocking</span>
+                <img
+                  src="https://tx-inc.com/wp-content/uploads/2023/07/TX-SCARA-_2023.06_6.png"
+                  alt="TX SCARA shelf-stocking robot by Telexistence"
+                  loading="lazy"
+                  referrerpolicy="no-referrer"
+                  onerror="this.closest('.robot-photo').classList.add('img-missing')"
+                />
+              </div>
+              <div class="robot-body">
+                <span class="robot-maker">Telexistence · Japan</span>
+                <h3>TX SCARA</h3>
+                <p>
+                  Restocks drink shelves in hundreds of FamilyMart convenience
+                  stores across Japan. It works autonomously — and the moment it
+                  needs help, a remote human pilot takes over. The closest
+                  real-world cousin of the Gentoo RX model.
+                </p>
+                <div class="robot-tags">
+                  <span>Shelf stocking</span><span>Remote takeover</span><span>In stores today</span>
+                </div>
+                <p class="robot-source">Image: <a href="https://tx-inc.com/en/blog/" target="_blank" rel="noopener">Telexistence Inc.</a></p>
+              </div>
+            </article>
+
+            <article class="robot-card" data-reveal data-delay="1" data-tilt>
+              <div class="robot-photo">
+                <span class="badge">Inventory</span>
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Tally_robot.jpg/960px-Tally_robot.jpg"
+                  alt="Tally shelf-scanning robot by Simbe Robotics in a store aisle"
+                  loading="lazy"
+                  referrerpolicy="no-referrer"
+                  onerror="this.closest('.robot-photo').classList.add('img-missing')"
+                />
+              </div>
+              <div class="robot-body">
+                <span class="robot-maker">Simbe Robotics · USA</span>
+                <h3>Tally</h3>
+                <p>
+                  An autonomous shelf-auditing rover that patrols the aisles
+                  scanning stock levels, price tags, and misplaced products at
+                  retailers like Schnucks, SpartanNash, and BJ's Wholesale Club.
+                </p>
+                <div class="robot-tags">
+                  <span>Inventory scanning</span><span>Autonomous</span><span>Grocery-proven</span>
+                </div>
+                <p class="robot-source">Image: <a href="https://commons.wikimedia.org/wiki/File:Tally_robot.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></p>
+              </div>
+            </article>
+
+            <article class="robot-card" data-reveal data-delay="2" data-tilt>
+              <div class="robot-photo">
+                <span class="badge">Store safety</span>
+                <img
+                  src="https://live.staticflickr.com/65535/49239961711_971fb4d79b_b.jpg"
+                  alt="Marty aisle-inspection robot by Badger Technologies at a Stop & Shop store"
+                  loading="lazy"
+                  referrerpolicy="no-referrer"
+                  onerror="this.closest('.robot-photo').classList.add('img-missing')"
+                />
+              </div>
+              <div class="robot-body">
+                <span class="robot-maker">Badger Technologies · USA</span>
+                <h3>Marty</h3>
+                <p>
+                  The tall, googly-eyed robot rolling through hundreds of Giant
+                  Food and Stop &amp; Shop supermarkets — spotting spills and
+                  hazards and flagging out-of-stock shelves as it goes.
+                </p>
+                <div class="robot-tags">
+                  <span>Hazard detection</span><span>Aisle scanning</span><span>Deployed at scale</span>
+                </div>
+                <p class="robot-source">Photo: <a href="https://www.flickr.com/photos/laughingsquid/49239961711/" target="_blank" rel="noopener">Scott Beale / Laughing Squid</a> (CC&nbsp;BY-NC-ND&nbsp;2.0)</p>
+              </div>
+            </article>
+
+            <article class="robot-card" data-reveal data-tilt>
+              <div class="robot-photo">
+                <span class="badge">Humanoid</span>
+                <img
+                  src="https://cdn.prod.website-files.com/68d6ca150ffa11fdc25d7575/698c88da0a3bf08e257409ea_digit-profile.jpg"
+                  alt="Digit bipedal humanoid robot by Agility Robotics"
+                  loading="lazy"
+                  referrerpolicy="no-referrer"
+                  onerror="this.closest('.robot-photo').classList.add('img-missing')"
+                />
+              </div>
+              <div class="robot-body">
+                <span class="robot-maker">Agility Robotics · USA</span>
+                <h3>Digit</h3>
+                <p>
+                  A human-sized bipedal robot built for logistics — lifting and
+                  moving totes in real warehouse deployments. Two legs mean it
+                  fits spaces designed for people, like a supermarket backroom.
+                </p>
+                <div class="robot-tags">
+                  <span>Humanoid</span><span>Tote handling</span><span>Warehouse-proven</span>
+                </div>
+                <p class="robot-source">Image: <a href="https://www.agilityrobotics.com/" target="_blank" rel="noopener">Agility Robotics</a></p>
+              </div>
+            </article>
+
+            <article class="robot-card" data-reveal data-delay="1" data-tilt>
+              <div class="robot-photo">
+                <span class="badge">Case handling</span>
+                <img
+                  src="https://bostondynamics.com/wp-content/uploads/2023/06/Stretch-unloads-carboard-cases-min-1-1536x1028.jpg"
+                  alt="Stretch box-handling robot by Boston Dynamics unloading cardboard cases"
+                  loading="lazy"
+                  referrerpolicy="no-referrer"
+                  onerror="this.closest('.robot-photo').classList.add('img-missing')"
+                />
+              </div>
+              <div class="robot-body">
+                <span class="robot-maker">Boston Dynamics · USA</span>
+                <h3>Stretch</h3>
+                <p>
+                  A box-moving specialist with a suction-gripper arm that unloads
+                  trucks and containers case by case — the heavy lifting behind
+                  getting product from the dock to the shelf.
+                </p>
+                <div class="robot-tags">
+                  <span>Case handling</span><span>Truck unloading</span><span>Logistics</span>
+                </div>
+                <p class="robot-source">Image: <a href="https://bostondynamics.com/products/stretch/" target="_blank" rel="noopener">Boston Dynamics</a></p>
+              </div>
+            </article>
+
+            <article class="robot-card" data-reveal data-delay="2" data-tilt>
+              <div class="robot-photo">
+                <span class="badge">Teleoperated</span>
+                <img
+                  src="https://cdn.sanity.io/images/qka6yvsc/production/9840f02d5ae03f52b20b1f13c6a0e9ae222c69ce-3813x4096.webp?w=1200&amp;fit=max&amp;auto=format"
+                  alt="NEO humanoid robot by 1X Technologies standing next to a person"
+                  loading="lazy"
+                  referrerpolicy="no-referrer"
+                  onerror="this.closest('.robot-photo').classList.add('img-missing')"
+                />
+              </div>
+              <div class="robot-body">
+                <span class="robot-maker">1X Technologies · Norway / USA</span>
+                <h3>NEO</h3>
+                <p>
+                  A soft-suited humanoid built to work alongside people, with
+                  remote human experts able to step in and guide it through
+                  tasks — living proof that people can pilot robots from
+                  anywhere on Earth.
+                </p>
+                <div class="robot-tags">
+                  <span>Teleoperated</span><span>Humanoid</span><span>Human-guided</span>
+                </div>
+                <p class="robot-source">Image: <a href="https://www.1x.tech/" target="_blank" rel="noopener">1X Technologies</a></p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section china-section" aria-labelledby="china-title">
+        <div class="section-inner">
+          <div class="section-heading" data-reveal>
+            <p class="section-kicker">Fresh from China</p>
+            <h2 id="china-title">The <span class="grad grad-red">China</span> wave.</h2>
+            <p class="subpage-lede">
+              China's robot makers are shipping store-ready machines at a pace no
+              one else matches — including the closest real-world cousins of the
+              concept robot pictured on our home page.
+            </p>
+          </div>
+
+          <div class="robot-grid">
+            <article class="robot-card" data-reveal data-tilt>
+              <div class="robot-photo">
+                <span class="badge">Seen on our homepage</span>
+                <img
+                  src="https://en.youibot.com/uploads/image/6a326ae824921.png"
+                  alt="Youibot mobile manipulator — autonomous base with mast, six-axis arm and onboard carrier deck"
+                  loading="lazy"
+                  referrerpolicy="no-referrer"
+                  onerror="this.closest('.robot-photo').classList.add('img-missing')"
+                />
+              </div>
+              <div class="robot-body">
+                <span class="robot-maker">Youibot Robotics · Shenzhen</span>
+                <h3>Youibot OW12-300</h3>
+                <p>
+                  An autonomous base with LED light strips, a vertical riser and
+                  a six-axis vision-guided arm that picks and places at shelf
+                  height, while an onboard deck buffers several carriers per
+                  trip. The robot in our home-page visual is a concept render —
+                  this is its nearest shipping relative, working 24/7 today in
+                  semiconductor and electronics plants.
+                </p>
+                <div class="robot-tags">
+                  <span>Mobile manipulator</span><span>6-axis arm</span><span>Onboard case deck</span>
+                </div>
+                <p class="robot-source">Image: <a href="https://en.youibot.com/products-category/o-series-19.html" target="_blank" rel="noopener">Youibot Robotics</a></p>
+              </div>
+            </article>
+
+            <article class="robot-card" data-reveal data-delay="1" data-tilt>
+              <div class="robot-photo">
+                <span class="badge">Runs real stores</span>
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/SZ_%E6%B7%B1%E5%9C%B3_Shenzhen_%E5%AF%B6%E5%AE%89_BaoAn_%E6%99%AF%E5%BE%9E%E8%B7%AF_Jingcong_Road_n_%E5%92%8C%E5%8C%AF%E8%B7%AF_HeHui_Road_shop_%E9%8A%80%E6%B2%B3%E5%A4%AA%E7%A9%BA%E8%89%99_Galbot_Store_beverage_booth_HooLoo_Coffee_October_2025_R12S_03.jpg/1280px-thumbnail.jpg"
+                  alt="Galbot G1 wheeled dual-arm robot working inside an unmanned Galbot Store in Shenzhen"
+                  loading="lazy"
+                  referrerpolicy="no-referrer"
+                  onerror="this.closest('.robot-photo').classList.add('img-missing')"
+                />
+              </div>
+              <div class="robot-body">
+                <span class="robot-maker">Galbot · Beijing</span>
+                <h3>Galbot G1</h3>
+                <p>
+                  A wheeled, dual-arm semi-humanoid that already runs 24/7
+                  unmanned retail — it opened the world's first
+                  humanoid-operated convenience store in Beijing, staffs
+                  pharmacies across the city, and fetches and restocks 5,000+
+                  product types straight from the shelves.
+                </p>
+                <div class="robot-tags">
+                  <span>Retail-proven</span><span>Dual-arm</span><span>24/7 stores</span>
+                </div>
+                <p class="robot-source">Photo: <a href="https://commons.wikimedia.org/w/index.php?curid=176888169" target="_blank" rel="noopener">Wikimedia Commons</a> (CC&nbsp;BY-SA)</p>
+              </div>
+            </article>
+
+            <article class="robot-card" data-reveal data-delay="2" data-tilt>
+              <div class="robot-photo">
+                <span class="badge">Industrial humanoid</span>
+                <img
+                  src="https://mma.prnewswire.com/media/2616488/units_Walker_S1_industrial_humanoid_robot_UBTECH_demonstrate_multi_task_parcel.jpg?p=publish"
+                  alt="Two UBTECH Walker S1 humanoid robots handling totes at a shelf and conveyor"
+                  loading="lazy"
+                  referrerpolicy="no-referrer"
+                  onerror="this.closest('.robot-photo').classList.add('img-missing')"
+                />
+              </div>
+              <div class="robot-body">
+                <span class="robot-maker">UBTECH · Shenzhen</span>
+                <h3>Walker S1</h3>
+                <p>
+                  A 1.72&nbsp;m industrial humanoid that lifts 15&nbsp;kg boxes
+                  with both arms. It has trained and worked on real production
+                  lines at Foxconn, BYD, Zeekr and the Audi-FAW plant — sorting
+                  parcels and moving totes between shelves and conveyors.
+                </p>
+                <div class="robot-tags">
+                  <span>Humanoid</span><span>Tote handling</span><span>Factory-piloted</span>
+                </div>
+                <p class="robot-source">Image: <a href="https://www.prnewswire.com/news-releases/ubtech-showcases-its-latest-humanoid-robots-and-solutions-at-leap-2025-302372273.html" target="_blank" rel="noopener">UBTECH / PR&nbsp;Newswire</a></p>
+              </div>
+            </article>
+
+            <article class="robot-card" data-reveal data-tilt>
+              <div class="robot-photo">
+                <span class="badge">Teleoperated</span>
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Unitree_G1.jpg/1280px-Unitree_G1.jpg"
+                  alt="Unitree G1 humanoid robot standing at an expo"
+                  loading="lazy"
+                  referrerpolicy="no-referrer"
+                  onerror="this.closest('.robot-photo').classList.add('img-missing')"
+                />
+              </div>
+              <div class="robot-body">
+                <span class="robot-maker">Unitree Robotics · Hangzhou</span>
+                <h3>Unitree G1</h3>
+                <p>
+                  The world's best-selling humanoid — thousands of units shipped
+                  in 2025, starting around $16,000. Full-body teleoperation
+                  support makes it a natural candidate for remotely guided store
+                  work, the heart of the Gentoo RX model.
+                </p>
+                <div class="robot-tags">
+                  <span>Humanoid</span><span>Teleoperation</span><span>Mass-produced</span>
+                </div>
+                <p class="robot-source">Photo: <a href="https://commons.wikimedia.org/wiki/File:Unitree_G1.jpg" target="_blank" rel="noopener">Sayanesy / Wikimedia Commons</a> (CC&nbsp;BY-SA&nbsp;4.0)</p>
+              </div>
+            </article>
+
+            <article class="robot-card" data-reveal data-delay="1" data-tilt>
+              <div class="robot-photo">
+                <span class="badge">Case handling</span>
+                <img
+                  src="https://www.hairobotics.com/sites/default/files/2024-11/a42-g-e4s_2_670x900_0.png"
+                  alt="Hai Robotics HaiPick A42 autonomous case-handling robot with telescopic mast and onboard trays"
+                  loading="lazy"
+                  referrerpolicy="no-referrer"
+                  onerror="this.closest('.robot-photo').classList.add('img-missing')"
+                />
+              </div>
+              <div class="robot-body">
+                <span class="robot-maker">Hai Robotics · Shenzhen</span>
+                <h3>HaiPick A42</h3>
+                <p>
+                  The original Autonomous Case-handling Robot: a mast-mounted
+                  telescopic gripper picks totes and cartons straight off
+                  shelving and buffers up to nine cases on board per trip.
+                  Deployed in over a thousand warehouse projects worldwide.
+                </p>
+                <div class="robot-tags">
+                  <span>Case handling</span><span>Telescopic mast</span><span>Warehouse-proven</span>
+                </div>
+                <p class="robot-source">Image: <a href="https://www.hairobotics.com/robots/haipick-a42" target="_blank" rel="noopener">Hai Robotics</a></p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="back-band" aria-label="Back to home">
+        <div class="section-inner" data-reveal>
+          <h2>Robots exist. <span class="grad grad-red">Service</span> is what's missing.</h2>
+          <p class="subpage-lede" style="margin: 0 auto 28px; text-align: center;">
+            Gentoo RX turns hardware like this into a managed shelf-stocking
+            service — leased, connected, monitored, and maintained.
+          </p>
+          <a class="button button-primary" href="index.html#contact">Talk to Gentoo RX &rarr;</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <a class="brand footer-brand" href="index.html" aria-label="Gentoo RX Inc home">
+          <svg class="brand-penguin" viewBox="0 0 100 130" aria-hidden="true">
+            <path d="M52 8C58 8 65 12 68 20L84 23.5 65.5 25.5C67.5 32 69.5 39 71 46 76 58 79 68 78.5 78 78 88 75 96 71 103 68 109 66 113 62.5 116.5 61 118.5 60 119.5 58.5 120 53 122 47 122 41.5 120 39 118.8 37 116.5 35 114.5 30 108 26.5 102 24.5 95.5 22 87.5 20.5 80 20.5 72.5 20.5 64.5 22.5 57 24.5 50 27.5 40.5 31.5 31.5 35 23 37.5 17 41 12.5 45 10 47 8.8 49.5 8 52 8Z" />
+            <path class="wing" d="M43.5 34.5C37 48 32.5 62 31 80 30.5 91 33.5 100 41 110" />
+            <path class="belly" d="M64 31C68 38 70.5 46 71 55 72 63 72.5 70 72.5 77 72.5 85 70.5 92.5 67.5 99.5 65.5 104.5 63 109 59.5 113.5" />
+            <circle class="eye" cx="62.5" cy="16.5" r="2.6" />
+          </svg>
+          <span class="brand-text">
+            <strong>GENTOO <em>RX</em></strong>
+            <small>R&thinsp;o&thinsp;b&thinsp;o&thinsp;t&thinsp;i&thinsp;c&thinsp;s</small>
+          </span>
+        </a>
+        <p>
+          Gentoo RX Inc provides supermarket labor services by integrating
+          robotics technology, telecommunications, and trained human monitoring.
+        </p>
+        <p class="footer-legal">&copy; 2026 Gentoo RX Inc &mdash; Made in the USA</p>
+      </div>
+    </footer>
+
+    <script src="script.js?v=10"></script>
+  </body>
+</html>

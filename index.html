@@ -5,310 +5,421 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Gentoo RX Inc provides labor services for supermarkets by integrating robotics technology, telecommunications, and trained human operators."
+      content="Gentoo RX Inc — robotic shelf-stocking as a service. Specialized robots, satellite-grade connectivity, and trained remote operators for supermarkets around the globe."
     />
-    <title>Gentoo RX Inc | Supermarket Labor Services</title>
+    <title>Gentoo RX | Robotic Shelf-Stocking as a Service</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 130'%3E%3Cpath d='M52 8C58 8 65 12 68 20L84 23.5 65.5 25.5C67.5 32 69.5 39 71 46 76 58 79 68 78.5 78 78 88 75 96 71 103 68 109 66 113 62.5 116.5 61 118.5 60 119.5 58.5 120 53 122 47 122 41.5 120 39 118.8 37 116.5 35 114.5 30 108 26.5 102 24.5 95.5 22 87.5 20.5 80 20.5 72.5 20.5 64.5 22.5 57 24.5 50 27.5 40.5 31.5 31.5 35 23 37.5 17 41 12.5 45 10 47 8.8 49.5 8 52 8Z' fill='none' stroke='%232f3bdb' stroke-width='5'/%3E%3Ccircle cx='62.5' cy='16.5' r='2.6' fill='%232f3bdb'/%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600&family=Caveat:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="preload" href="assets/gentoo-rx-shelf-background.jpeg" as="image" />
-    <link rel="stylesheet" href="styles.css?v=7" />
+    <link rel="stylesheet" href="styles.css?v=10" />
   </head>
   <body>
+    <div class="bg-grid" aria-hidden="true"></div>
+
     <header class="site-header" data-header>
       <a class="brand" href="#top" aria-label="Gentoo RX Inc home">
-        <span class="brand-mark" aria-hidden="true">G</span>
-        <span>
-          <strong>Gentoo RX</strong>
-          <small>Delaware USA</small>
+        <svg class="brand-penguin" viewBox="0 0 100 130" aria-hidden="true">
+          <path
+            d="M52 8C58 8 65 12 68 20L84 23.5 65.5 25.5C67.5 32 69.5 39 71 46 76 58 79 68 78.5 78 78 88 75 96 71 103 68 109 66 113 62.5 116.5 61 118.5 60 119.5 58.5 120 53 122 47 122 41.5 120 39 118.8 37 116.5 35 114.5 30 108 26.5 102 24.5 95.5 22 87.5 20.5 80 20.5 72.5 20.5 64.5 22.5 57 24.5 50 27.5 40.5 31.5 31.5 35 23 37.5 17 41 12.5 45 10 47 8.8 49.5 8 52 8Z"
+          />
+          <path class="wing" d="M43.5 34.5C37 48 32.5 62 31 80 30.5 91 33.5 100 41 110" />
+          <circle class="eye" cx="62.5" cy="16.5" r="2.6" />
+          <path class="belly" d="M64 31C68 38 70.5 46 71 55 72 63 72.5 70 72.5 77 72.5 85 70.5 92.5 67.5 99.5 65.5 104.5 63 109 59.5 113.5" />
+        </svg>
+        <span class="brand-text">
+          <strong>GENTOO <em>RX</em></strong>
+          <small>R&thinsp;o&thinsp;b&thinsp;o&thinsp;t&thinsp;i&thinsp;c&thinsp;s</small>
         </span>
       </a>
 
       <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#system">The System</a>
         <a href="#model">Model</a>
-        <a href="#benefits">Benefits</a>
-        <a href="#operations">Operations</a>
-        <a href="#pilot">Contact</a>
+        <a href="#why">Why</a>
+        <a href="robots.html">Fleet</a>
       </nav>
 
-      <a class="nav-cta" href="#pilot">Contact owner</a>
+      <a class="nav-cta" href="#contact">Contact&nbsp;us</a>
     </header>
 
     <main id="top">
+      <!-- ============ HERO ============ -->
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-media" aria-hidden="true">
-          <img
-            src="assets/gentoo-rx-shelf-background.jpeg"
-            alt=""
-            fetchpriority="high"
-          />
+          <img src="assets/gentoo-rx-shelf-background.jpeg" alt="" fetchpriority="high" />
         </div>
         <div class="hero-scrim" aria-hidden="true"></div>
+        <div class="aurora" aria-hidden="true"></div>
+        <canvas class="hero-particles" data-particles aria-hidden="true"></canvas>
+
         <div class="hero-content">
-          <p class="eyebrow">Supermarket labor services around the globe</p>
-          <h1 id="hero-title">Gentoo RX Inc</h1>
-          <p class="hero-lede">
-            Incorporated in Delaware, USA. We integrate robotics technology,
-            telecommunications, and trained human operators to help supermarkets
-            stock shelves with greater cost efficiency.
+          <p class="hero-badge" data-reveal>
+            <span class="pulse-dot" aria-hidden="true"></span>
+            Robotics&nbsp;&times;&nbsp;Telecom&nbsp;&times;&nbsp;People
           </p>
-          <div class="hero-actions" aria-label="Primary actions">
-            <a class="button button-primary" href="#pilot">Request service brief</a>
-            <a class="button button-secondary" href="#model">See the model</a>
+          <h1 id="hero-title" data-reveal data-delay="1">
+            Shelves stocked by <span class="grad grad-blue">robots</span>.<br />
+            Guided by <span class="grad grad-red">people</span>.<br />
+            Anywhere on Earth.
+          </h1>
+          <p class="hero-lede" data-reveal data-delay="2">
+            Gentoo RX is a managed labor service for supermarkets: specialized
+            shelf-stocking robots, always-on connectivity, and trained remote
+            operators — delivered as one service.
+          </p>
+          <div class="hero-actions" data-reveal data-delay="3" aria-label="Primary actions">
+            <a class="button button-primary" href="#contact">Request a service brief</a>
+            <a class="button button-ghost" href="#system">See how it works&nbsp;&darr;</a>
           </div>
         </div>
 
+        <svg class="hero-penguin" viewBox="0 0 100 130" aria-hidden="true">
+          <path
+            class="draw"
+            d="M52 8C58 8 65 12 68 20L84 23.5 65.5 25.5C67.5 32 69.5 39 71 46 76 58 79 68 78.5 78 78 88 75 96 71 103 68 109 66 113 62.5 116.5 61 118.5 60 119.5 58.5 120 53 122 47 122 41.5 120 39 118.8 37 116.5 35 114.5 30 108 26.5 102 24.5 95.5 22 87.5 20.5 80 20.5 72.5 20.5 64.5 22.5 57 24.5 50 27.5 40.5 31.5 31.5 35 23 37.5 17 41 12.5 45 10 47 8.8 49.5 8 52 8Z"
+            pathLength="1"
+          />
+          <path class="draw wing" d="M43.5 34.5C37 48 32.5 62 31 80 30.5 91 33.5 100 41 110" pathLength="1" />
+          <circle class="eye" cx="62.5" cy="16.5" r="2.6" />
+          <path class="draw belly" d="M64 31C68 38 70.5 46 71 55 72 63 72.5 70 72.5 77 72.5 85 70.5 92.5 67.5 99.5 65.5 104.5 63 109 59.5 113.5" pathLength="1" />
+        </svg>
+
+        <div class="marquee" aria-hidden="true">
+          <div class="marquee-track">
+            <span>Shelf-stocking robotics ✦ Remote operations ✦ Leased fleets ✦ Trained operators ✦ 24/7 monitoring ✦ Global labor network ✦&nbsp;</span
+            ><span>Shelf-stocking robotics ✦ Remote operations ✦ Leased fleets ✦ Trained operators ✦ 24/7 monitoring ✦ Global labor network ✦&nbsp;</span>
+          </div>
+        </div>
       </section>
 
-      <section class="hero-panel" aria-label="Key operating principles">
-        <div>
-          <span>01</span>
-          <strong>Robotics plus people</strong>
-          <p>Remote operators monitor every shelf-stocking task.</p>
-        </div>
-        <div>
-          <span>02</span>
-          <strong>Global labor model</strong>
-          <p>Remote-control centers can be placed where labor is optimized.</p>
-        </div>
-        <div>
-          <span>03</span>
-          <strong>Leased robot fleet</strong>
-          <p>Maintenance, replacement, and model upgrades are our responsibility.</p>
+      <!-- ============ STATS ============ -->
+      <section class="stats" aria-label="Gentoo RX at a glance">
+        <div class="stats-inner">
+          <div class="stat" data-reveal>
+            <strong><span data-count="24">0</span>/7</strong>
+            <span>remote monitoring of every robot</span>
+          </div>
+          <div class="stat" data-reveal data-delay="1">
+            <strong>$<span data-count="0">0</span></strong>
+            <span>upfront robot investment — the fleet is leased</span>
+          </div>
+          <div class="stat" data-reveal data-delay="2">
+            <strong><span data-count="100">0</span>%</strong>
+            <span>maintenance, repairs &amp; upgrades on us</span>
+          </div>
+          <div class="stat" data-reveal data-delay="3">
+            <strong><span data-count="1">0</span></strong>
+            <span>connected operations loop, worldwide</span>
+          </div>
         </div>
       </section>
 
-      <section class="section intro-section" aria-labelledby="intro-title">
-        <div class="section-inner intro-grid">
-          <div>
-            <p class="section-kicker">A practical retail labor platform</p>
-            <h2 id="intro-title">
-              Gentoo RX helps supermarkets solve labor pressure with a managed
-              shelf-stocking system.
+      <!-- ============ THE SYSTEM (sketch) ============ -->
+      <section class="section system-section" id="system" aria-labelledby="system-title">
+        <div class="section-inner">
+          <div class="section-heading center" data-reveal>
+            <p class="section-kicker">How it works</p>
+            <h2 id="system-title">
+              One connected loop —<br />from <span class="grad grad-blue">aisle</span> to
+              <span class="grad grad-red">operator</span>.
             </h2>
           </div>
-          <p>
-            We provide labor services to supermarkets around the globe. By
-            combining specialized robots, telecommunications, and trained human
-            monitoring, Gentoo RX creates a practical system for stocking
-            supermarket shelves while improving cost efficiency for customers.
-          </p>
+
+          <div class="paper-wrap" data-reveal data-delay="1">
+            <figure class="paper" data-sketch>
+              <span class="tape tape-left" aria-hidden="true"></span>
+              <span class="tape tape-right" aria-hidden="true"></span>
+
+              <svg
+                class="sketch"
+                viewBox="0 -14 920 456"
+                role="img"
+                aria-label="Cartoon sketch: a supermarket with a robot connects through a satellite internet link to a remote monitor center."
+              >
+                <!-- ====== supermarket ====== -->
+                <g class="ink">
+                  <path class="draw d1" pathLength="1" d="M62 268 L298 262 L296 424 L66 428 Z" />
+                  <!-- awning -->
+                  <path class="draw d1" pathLength="1" d="M52 240 L308 234 L302 268 L58 273 Z" />
+                  <path class="draw d2" pathLength="1" d="M88 239 L90 270 M120 238 L122 269 M152 237 L154 269 M184 236 L186 268 M216 236 L218 267 M248 235 L250 267 M278 235 L280 266" />
+                  <path class="red-fill soft" d="M58 240 L88 239 L90 270 L62 271 Z M120 238 L152 237 L154 269 L122 269 Z M184 236 L216 236 L218 267 L186 268 Z M248 235 L278 235 L280 266 L250 267 Z" />
+                  <!-- window with shelves -->
+                  <path class="draw d2" pathLength="1" d="M84 292 L176 290 L175 372 L86 374 Z" />
+                  <path class="draw d3" pathLength="1" d="M86 318 L175 316 M86 344 L175 342" />
+                  <path class="draw d3" pathLength="1" d="M94 306 h14 M116 305 h16 M140 304 h13 M94 332 h16 M120 331 h14 M146 330 h12 M94 358 h13 M115 357 h17 M142 356 h14" />
+                  <!-- door -->
+                  <path class="draw d2" pathLength="1" d="M206 424 L207 316 L262 314 L263 423 M234 315 L234 423 M224 368 h-6 M246 367 h6" />
+                  <!-- ground -->
+                  <path class="draw d3" pathLength="1" d="M40 430 C 140 426, 260 430, 400 427" />
+                </g>
+                <!-- robot -->
+                <g class="ink robot">
+                  <path class="draw d3" pathLength="1" d="M330 336 L378 334 L380 394 L334 396 Z" />
+                  <path class="draw d3" pathLength="1" d="M340 316 L370 314 L371 334 L341 336 Z" />
+                  <circle class="dot" cx="349" cy="325" r="2.6" />
+                  <circle class="dot" cx="362" cy="324" r="2.6" />
+                  <path class="draw d4" pathLength="1" d="M351 330 C 354 332, 358 332, 361 330" />
+                  <path class="draw d4" pathLength="1" d="M355 314 L354 304 M354 304 c-1 -4 5 -6 6 -1" />
+                  <circle class="draw d4" pathLength="1" cx="344" cy="402" r="7" />
+                  <circle class="draw d4" pathLength="1" cx="368" cy="401" r="7" />
+                  <!-- arm holding box toward shelf window -->
+                  <path class="draw d4" pathLength="1" d="M330 350 C 318 348, 310 344, 302 338" />
+                  <path class="draw d4" pathLength="1" d="M288 326 L304 324 L305 340 L290 342 Z" />
+                  <!-- speech bubble -->
+                  <path class="draw d5" pathLength="1" d="M384 300 C 380 288, 390 278, 404 278 C 420 278, 430 284, 428 294 C 426 304, 414 308, 402 306 L 390 314 L 392 304 C 388 304, 385 303, 384 300 Z" />
+                  <text class="hand small" x="389" y="299">beep!</text>
+                </g>
+                <text class="hand red label" x="88" y="212">supermarket</text>
+                <path class="draw d2 red-ink" pathLength="1" d="M92 224 C 140 230, 180 228, 226 224" />
+
+                <!-- ====== satellite ====== -->
+                <g class="ink sat">
+                  <path class="draw d2" pathLength="1" d="M436 74 L508 64 L514 100 L442 110 Z" />
+                  <circle class="draw d3" pathLength="1" cx="446" cy="90" r="11" />
+                  <path class="draw d3" pathLength="1" d="M514 76 L556 68 L560 92 L518 100 Z M528 71 L531 97 M544 69 L547 94" />
+                  <path class="draw d3" pathLength="1" d="M436 86 L400 90 L398 72 L434 68 Z M412 71 L414 89" />
+                  <!-- signal waves toward the store -->
+                  <path class="wave w1" d="M382 66 C 372 76, 372 96, 382 106" />
+                  <path class="wave w2" d="M366 56 C 352 72, 352 100, 366 116" />
+                  <path class="wave w3" d="M350 46 C 332 68, 332 104, 350 126" />
+                </g>
+                <text class="hand red label" x="404" y="146">satellite</text>
+                <text class="hand small blue" x="418" y="172">( internet )</text>
+
+                <!-- ====== monitor center ====== -->
+                <g class="ink center">
+                  <!-- monitors -->
+                  <path class="draw d2" pathLength="1" d="M648 232 L718 228 L720 288 L650 292 Z" />
+                  <path class="draw d2" pathLength="1" d="M728 226 L800 224 L802 286 L730 288 Z" />
+                  <path class="draw d2" pathLength="1" d="M810 226 L874 228 L872 288 L808 288 Z" />
+                  <!-- screen doodles: robot cam, chart, map -->
+                  <path class="draw d4" pathLength="1" d="M662 262 l10 -12 l10 12 M666 274 h16" />
+                  <path class="draw d4" pathLength="1" d="M740 274 L752 254 L762 268 L774 240" />
+                  <circle class="draw d4" pathLength="1" cx="840" cy="256" r="14" />
+                  <path class="draw d4" pathLength="1" d="M832 246 c6 8 10 12 16 18" />
+                  <!-- desk -->
+                  <path class="draw d3" pathLength="1" d="M632 330 C 710 324, 800 324, 886 328" />
+                  <path class="draw d3" pathLength="1" d="M652 330 L648 424 M868 328 L874 422" />
+                  <!-- operator seated on a chair at the side of the desk -->
+                  <circle class="draw d3" pathLength="1" cx="612" cy="268" r="15" />
+                  <path class="draw d4" pathLength="1" d="M597 265 C 595 254, 602 246, 612 245 C 622 246, 629 254, 627 265" />
+                  <circle class="dot" cx="615" cy="266" r="1.8" />
+                  <circle class="dot" cx="621" cy="267" r="1.8" />
+                  <path class="draw d4" pathLength="1" d="M614 274 c3 2 7 1.5 9 -1" />
+                  <path class="draw d4" pathLength="1" d="M610 283 C 608 302, 607 324, 606 348" />
+                  <path class="draw d4" pathLength="1" d="M609 298 C 620 308, 633 318, 646 325 M609 306 C 619 314, 630 321, 641 328" />
+                  <path class="draw d4" pathLength="1" d="M606 348 C 618 350, 629 351, 638 352 C 640 370, 641 386, 641 402 L 652 404" />
+                  <!-- office chair -->
+                  <path class="draw d5" pathLength="1" d="M580 350 L 618 352 M582 350 C 578 332, 578 316, 581 302 M598 352 L 597 386 M583 404 L 597 386 L 611 404" />
+                  <circle class="draw d5" pathLength="1" cx="581" cy="408" r="3" />
+                  <circle class="draw d5" pathLength="1" cx="613" cy="408" r="3" />
+                  <!-- coffee -->
+                  <path class="draw d5" pathLength="1" d="M694 318 l2 12 h12 l2 -12 Z M710 320 c6 0 6 8 0 8" />
+                  <path class="wave w1" d="M698 306 c2 -4 -2 -6 0 -10 M704 306 c2 -4 -2 -6 0 -10" />
+                </g>
+                <text class="hand red label" x="700" y="198">monitor center</text>
+                <path class="draw d2 red-ink" pathLength="1" d="M704 212 C 750 218, 790 216, 838 212" />
+
+                <!-- ====== links ====== -->
+                <g class="ink links">
+                  <!-- store -> satellite -->
+                  <path class="draw d3 dashline" id="linkA" pathLength="1" d="M300 240 C 330 190, 372 140, 424 108" />
+                  <path class="draw d4" pathLength="1" d="M424 108 l-14 2 M424 108 l-6 12" />
+                  <!-- monitor center -> satellite -->
+                  <path class="draw d3 dashline" id="linkB" pathLength="1" d="M740 216 C 700 160, 620 112, 532 92" />
+                  <path class="draw d4" pathLength="1" d="M532 92 l13 -4 M532 92 l12 8" />
+                  <text class="hand small blue" x="266" y="158">video feed &uarr;</text>
+                  <text class="hand small blue" x="642" y="98">commands &uarr;</text>
+                  <!-- data packets -->
+                  <circle class="packet red-dot" r="5">
+                    <animateMotion dur="3.2s" repeatCount="indefinite" rotate="none" path="M300 240 C 330 190, 372 140, 424 108" />
+                  </circle>
+                  <circle class="packet blue-dot" r="5">
+                    <animateMotion dur="3.2s" begin="1.6s" repeatCount="indefinite" rotate="none" path="M740 216 C 700 160, 620 112, 532 92" />
+                  </circle>
+                  <circle class="packet blue-dot" r="4">
+                    <animateMotion dur="3.2s" begin="0.8s" repeatCount="indefinite" rotate="none" path="M424 108 C 372 140, 330 190, 300 240" />
+                  </circle>
+                </g>
+
+                <!-- doodles -->
+                <g class="ink doodle">
+                  <path class="draw d5" pathLength="1" d="M556 138 l4 10 10 4 -10 4 -4 10 -4 -10 -10 -4 10 -4 Z" />
+                  <path class="draw d5" pathLength="1" d="M112 118 l3 8 8 3 -8 3 -3 8 -3 -8 -8 -3 8 -3 Z" />
+                  <path class="draw d5 red-ink" pathLength="1" d="M846 130 l3 8 8 3 -8 3 -3 8 -3 -8 -8 -3 8 -3 Z" />
+                </g>
+              </svg>
+              <figcaption class="hand paper-caption">the plan — straight from our notebook ✎</figcaption>
+            </figure>
+          </div>
+
+          <div class="system-cards">
+            <article class="mini-card" data-reveal data-tilt>
+              <span class="mini-num grad grad-blue">01</span>
+              <h3>Store &amp; robot</h3>
+              <p>Specialized robots work the aisles at night, restocking shelves inside your supermarket.</p>
+            </article>
+            <article class="mini-card" data-reveal data-delay="1" data-tilt>
+              <span class="mini-num grad grad-blue">02</span>
+              <h3>Satellite link</h3>
+              <p>Every store is connected through an always-on, satellite-grade internet link.</p>
+            </article>
+            <article class="mini-card" data-reveal data-delay="2" data-tilt>
+              <span class="mini-num grad grad-red">03</span>
+              <h3>Monitor center</h3>
+              <p>Trained operators watch every task and take control the moment a robot needs a human touch.</p>
+            </article>
+          </div>
         </div>
       </section>
 
+      <!-- ============ MODEL ============ -->
       <section class="section model-section" id="model" aria-labelledby="model-title">
         <div class="section-inner">
-          <div class="section-heading">
+          <div class="section-heading" data-reveal>
             <p class="section-kicker">Operating model</p>
             <h2 id="model-title">
-              Robots perform the physical shelf work. People stay in control.
+              Robots do the lifting.<br />People stay in <span class="grad grad-red">control</span>.
             </h2>
           </div>
 
           <div class="process-grid">
-            <article class="process-card">
+            <article class="process-card" data-reveal data-tilt>
               <div class="process-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" focusable="false">
-                  <path d="M4 7h16M6 7v12h12V7M9 7V5h6v2" />
-                </svg>
+                <svg viewBox="0 0 24 24"><path d="M4 7h16M6 7v12h12V7M9 7V5h6v2" /></svg>
               </div>
               <span>Lease</span>
-              <h3>Robots leased to supermarkets</h3>
-              <p>
-                Gentoo RX leases specialized shelf-stocking robots to
-                supermarkets, lowering the need for large upfront equipment
-                investment.
-              </p>
+              <h3>Robots leased, never bought</h3>
+              <p>Gentoo RX leases specialized shelf-stocking robots to supermarkets — no heavy upfront equipment investment.</p>
             </article>
 
-            <article class="process-card">
+            <article class="process-card" data-reveal data-delay="1" data-tilt>
               <div class="process-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" focusable="false">
-                  <path d="M6 5h12v14H6zM9 9h6M9 13h6M9 17h3" />
-                </svg>
+                <svg viewBox="0 0 24 24"><path d="M6 5h12v14H6zM9 9h6M9 13h6M9 17h3" /></svg>
               </div>
               <span>Control</span>
               <h3>Remote monitoring center</h3>
-              <p>
-                Operators monitor and control the robots from a remote center,
-                allowing labor to be organized efficiently across different
-                parts of the globe.
-              </p>
+              <p>Operators monitor and control the robots from remote centers placed wherever labor is organized best.</p>
             </article>
 
-            <article class="process-card">
+            <article class="process-card" data-reveal data-delay="2" data-tilt>
               <div class="process-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" focusable="false">
-                  <path d="M4 6h16v9H4zM8 19h8M12 15v4M8 10h2M12 10h4" />
-                </svg>
+                <svg viewBox="0 0 24 24"><path d="M4 6h16v9H4zM8 19h8M12 15v4M8 10h2M12 10h4" /></svg>
               </div>
               <span>Train</span>
-              <h3>Employee training included</h3>
-              <p>
-                We train the employees who monitor the robots in each
-                supermarket, helping teams operate the system with confidence.
-              </p>
+              <h3>Training included</h3>
+              <p>We train the people who monitor the robots, so every team runs the system with confidence.</p>
             </article>
 
-            <article class="process-card">
+            <article class="process-card" data-reveal data-delay="3" data-tilt>
               <div class="process-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" focusable="false">
-                  <path d="M12 3 5 6v5c0 4.5 2.8 8.6 7 10 4.2-1.4 7-5.5 7-10V6zM9 12l2 2 4-5" />
-                </svg>
+                <svg viewBox="0 0 24 24"><path d="M12 3 5 6v5c0 4.5 2.8 8.6 7 10 4.2-1.4 7-5.5 7-10V6zM9 12l2 2 4-5" /></svg>
               </div>
               <span>Support</span>
-              <h3>Maintenance and upgrades</h3>
-              <p>
-                Gentoo RX is responsible for robot maintenance, replacement,
-                and upgrading newer models as the service evolves.
-              </p>
+              <h3>Maintenance &amp; upgrades</h3>
+              <p>Repairs, replacements, and newer robot models over time — all our responsibility, not yours.</p>
             </article>
           </div>
         </div>
       </section>
 
-      <section
-        class="section benefits-section"
-        id="benefits"
-        aria-labelledby="benefits-title"
-      >
+      <!-- ============ WHY ============ -->
+      <section class="section why-section" id="why" aria-labelledby="why-title">
+        <div class="glow glow-red" aria-hidden="true"></div>
+        <div class="glow glow-blue" aria-hidden="true"></div>
         <div class="section-inner">
-          <div class="section-heading compact">
-            <p class="section-kicker">Supermarket labor challenges</p>
-            <h2 id="benefits-title">
-              Supermarkets need a more efficient way to staff repetitive
-              shelf-stocking work.
+          <div class="section-heading" data-reveal>
+            <p class="section-kicker">Why Gentoo RX</p>
+            <h2 id="why-title">
+              Overnight stocking is<br />a <span class="grad grad-red">people problem</span>. We solved it with
+              <span class="grad grad-blue">both</span>.
             </h2>
           </div>
 
           <div class="benefit-grid">
-            <article class="benefit-card">
+            <article class="benefit-card" data-reveal data-tilt>
               <span>Cost</span>
               <h3>High labor costs</h3>
-              <p>
-                Store operators face rising labor expense, especially for
-                repetitive stocking work that must be completed reliably.
-              </p>
+              <p>Rising labor expense for repetitive stocking work that still has to be done reliably, night after night.</p>
             </article>
-            <article class="benefit-card">
+            <article class="benefit-card" data-reveal data-delay="1" data-tilt>
               <span>Turnover</span>
               <h3>Unstable labor force</h3>
-              <p>
-                Supermarkets often struggle with high employee turnover,
-                making staffing harder to plan and control.
-              </p>
+              <p>High employee turnover makes overnight staffing nearly impossible to plan and control.</p>
             </article>
-            <article class="benefit-card">
+            <article class="benefit-card" data-reveal data-delay="2" data-tilt>
               <span>Health</span>
               <h3>Night-shift strain</h3>
-              <p>
-                Employees working overnight shifts can encounter physical and
-                emotional health issues, including fatigue and depression.
-              </p>
+              <p>Overnight shifts take a real physical and emotional toll on people — fatigue, isolation, burnout.</p>
             </article>
-            <article class="benefit-card">
+            <article class="benefit-card" data-reveal data-tilt>
               <span>Labor pool</span>
-              <h3>Shortest labor pool</h3>
-              <p>
-                Many markets have a limited pool of people willing and
-                available to perform overnight shelf-stocking work.
-              </p>
+              <h3>Shrinking labor pool</h3>
+              <p>Fewer and fewer people are willing and available to stock shelves at 3&nbsp;a.m.</p>
             </article>
-            <article class="benefit-card">
+            <article class="benefit-card" data-reveal data-delay="1" data-tilt>
               <span>Efficiency</span>
               <h3>Cost-efficient service</h3>
-              <p>
-                Remote-controlled robotics helps optimize labor costs while
-                maintaining a satisfactory service for supermarkets.
-              </p>
+              <p>Remote-controlled robotics optimizes labor cost while keeping service quality where you need it.</p>
             </article>
-            <article class="benefit-card">
+            <article class="benefit-card" data-reveal data-delay="2" data-tilt>
               <span>Customer</span>
-              <h3>Customer satisfaction</h3>
-              <p>
-                Our responsibility is to provide an efficient system that helps
-                supermarkets satisfy their customers.
-              </p>
+              <h3>Happy customers</h3>
+              <p>Full shelves in the morning. Our job is a system that helps your supermarket satisfy its customers.</p>
             </article>
           </div>
         </div>
       </section>
 
-      <section
-        class="section operations-section"
-        id="operations"
-        aria-labelledby="operations-title"
-      >
-        <div class="section-inner operations-grid">
-          <div class="operations-copy">
-            <p class="section-kicker">Remote-control workflow</p>
-            <h2 id="operations-title">
-              A managed service that connects robots, telecom, and trained
-              people.
-            </h2>
-            <p>
-              Specialized robots perform the physical work required to stock
-              shelves while trained employees monitor the tasks through remote
-              control. By placing remote-control capability in different parts
-              of the globe, Gentoo RX can optimize labor costs for customers.
-            </p>
-            <ul class="check-list">
-              <li>Robots handle repeatable shelf-stocking tasks inside the supermarket.</li>
-              <li>Employees are trained to monitor and control robot activity.</li>
-              <li>Maintenance, replacement, and newer model upgrades are managed by Gentoo RX.</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section class="section timeline-section" aria-labelledby="timeline-title">
-        <div class="section-inner">
-          <div class="section-heading">
-            <p class="section-kicker">Service path</p>
-            <h2 id="timeline-title">From assessment to a trained operating system.</h2>
-          </div>
-
-          <div class="timeline">
-            <article>
-              <span>Step 1</span>
-              <h3>Store assessment</h3>
-              <p>Aisle layout, shelf heights, stocking needs, and labor constraints are reviewed.</p>
-            </article>
-            <article>
-              <span>Step 2</span>
-              <h3>Robot lease plan</h3>
-              <p>The right robot count, service structure, and monitoring process are defined.</p>
-            </article>
-            <article>
-              <span>Step 3</span>
-              <h3>Training and setup</h3>
-              <p>Employees are trained to monitor robots and support the service inside the supermarket.</p>
-            </article>
-            <article>
-              <span>Step 4</span>
-              <h3>Maintenance and improvement</h3>
-              <p>Gentoo RX manages maintenance, replacement, and newer model upgrades over time.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section pilot-section" id="pilot" aria-labelledby="pilot-title">
-        <div class="section-inner pilot-grid">
+      <!-- ============ FLEET CTA ============ -->
+      <section class="section fleet-cta" aria-labelledby="fleet-title">
+        <div class="section-inner fleet-inner" data-reveal>
+          <svg class="fleet-bot" viewBox="0 0 110 120" aria-hidden="true">
+            <path d="M25 36 L85 33 L88 92 L28 95 Z" />
+            <path d="M39 12 L73 10 L74 33 L40 35 Z" />
+            <circle class="dot" cx="50" cy="22" r="3.2" />
+            <circle class="dot" cx="65" cy="21" r="3.2" />
+            <path d="M52 28 C 56 31, 61 31, 64 28" />
+            <path d="M56 10 L55 2 M55 2 c-1 -4 6 -6 7 0" />
+            <circle cx="41" cy="103" r="8" />
+            <circle cx="73" cy="102" r="8" />
+            <path d="M25 52 C 12 50, 6 44, 2 36 M88 50 C 100 48, 105 42, 108 34" />
+          </svg>
           <div>
+            <p class="section-kicker">The hardware is already real</p>
+            <h2 id="fleet-title">Meet the <span class="grad grad-blue">machines</span>.</h2>
+            <p class="fleet-lede">
+              Shelf-scanning rovers, restocking arms, box-moving humanoids — robots
+              suited to this work already roam real stores and warehouses today.
+            </p>
+            <a class="button button-primary" href="robots.html">Explore the robot fleet &rarr;</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ CONTACT ============ -->
+      <section class="section contact-section" id="contact" aria-labelledby="contact-title">
+        <div class="section-inner contact-grid">
+          <div data-reveal>
             <p class="section-kicker">Company contact</p>
-            <h2 id="pilot-title">
-              Talk with us about supermarket labor services.
-            </h2>
+            <h2 id="contact-title">Let's talk about your <span class="grad grad-red">shelves</span>.</h2>
             <p>
-              Gentoo RX Inc is incorporated in Delaware, USA and founded by
-              Oswaldo Per Pereira. For more information, feel free to contact
-              us.
+              Gentoo RX Inc was founded by Oswaldo Per Pereira. For a service
+              brief or any question about robotic shelf-stocking, reach out —
+              we answer fast.
             </p>
             <div class="contact-list" aria-label="Gentoo RX Inc contact information">
-              <a href="mailto:waldoper@icloud.com">waldoper@icloud.com</a>
-              <a href="tel:+13125220571">+1-312-522-0571</a>
+              <a href="mailto:waldoper@icloud.com"><span aria-hidden="true">✉</span> waldoper@icloud.com</a>
+              <a href="tel:+13125220571"><span aria-hidden="true">☏</span> +1-312-522-0571</a>
             </div>
           </div>
 
-          <form class="pilot-form" data-pilot-form>
+          <form class="contact-form" data-contact-form data-reveal data-delay="1">
             <label>
               Name
               <input type="text" name="name" autocomplete="name" required />
@@ -332,6 +443,7 @@
               <input type="email" name="email" autocomplete="email" required />
             </label>
             <button class="button button-primary" type="submit">Request service brief</button>
+            <p class="form-done" data-form-done hidden>🐧 Got it — we'll be in touch shortly.</p>
           </form>
         </div>
       </section>
@@ -340,19 +452,25 @@
     <footer class="site-footer">
       <div class="footer-inner">
         <a class="brand footer-brand" href="#top" aria-label="Gentoo RX Inc home">
-          <span class="brand-mark" aria-hidden="true">G</span>
-          <span>
-            <strong>Gentoo RX</strong>
-            <small>Inc</small>
+          <svg class="brand-penguin" viewBox="0 0 100 130" aria-hidden="true">
+            <path d="M52 8C58 8 65 12 68 20L84 23.5 65.5 25.5C67.5 32 69.5 39 71 46 76 58 79 68 78.5 78 78 88 75 96 71 103 68 109 66 113 62.5 116.5 61 118.5 60 119.5 58.5 120 53 122 47 122 41.5 120 39 118.8 37 116.5 35 114.5 30 108 26.5 102 24.5 95.5 22 87.5 20.5 80 20.5 72.5 20.5 64.5 22.5 57 24.5 50 27.5 40.5 31.5 31.5 35 23 37.5 17 41 12.5 45 10 47 8.8 49.5 8 52 8Z" />
+            <path class="wing" d="M43.5 34.5C37 48 32.5 62 31 80 30.5 91 33.5 100 41 110" />
+            <path class="belly" d="M64 31C68 38 70.5 46 71 55 72 63 72.5 70 72.5 77 72.5 85 70.5 92.5 67.5 99.5 65.5 104.5 63 109 59.5 113.5" />
+            <circle class="eye" cx="62.5" cy="16.5" r="2.6" />
+          </svg>
+          <span class="brand-text">
+            <strong>GENTOO <em>RX</em></strong>
+            <small>R&thinsp;o&thinsp;b&thinsp;o&thinsp;t&thinsp;i&thinsp;c&thinsp;s</small>
           </span>
         </a>
         <p>
           Gentoo RX Inc provides supermarket labor services by integrating
           robotics technology, telecommunications, and trained human monitoring.
         </p>
+        <p class="footer-legal">&copy; 2026 Gentoo RX Inc &mdash; Made in the USA</p>
       </div>
     </footer>
 
-    <script src="script.js?v=7"></script>
+    <script src="script.js?v=10"></script>
   </body>
 </html>
