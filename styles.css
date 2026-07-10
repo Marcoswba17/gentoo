@@ -14,7 +14,7 @@
   --ink: #2733c9;
   --ink-red: #d92323;
   --radius: 16px;
-  --max-width: 1180px;
+  --max-width: 1320px;
   --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
   --font-body: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-hand: Caveat, "Segoe Print", cursive;
@@ -555,7 +555,7 @@ h3 {
 
 .stats-inner {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 28px;
   width: min(calc(100% - 40px), var(--max-width));
   margin: 0 auto;
@@ -901,7 +901,7 @@ h3 {
 /* ============ model ============ */
 .process-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
 }
 
