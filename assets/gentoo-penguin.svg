@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170 230" role="img" aria-labelledby="penguin-title penguin-desc">
+  <title id="penguin-title">Gentoo RX penguin emblem</title>
+  <desc id="penguin-desc">A bold, polished penguin silhouette in the Gentoo RX brand colors.</desc>
+  <defs>
+    <linearGradient id="body" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#172e76"/>
+      <stop offset="1" stop-color="#0a1739"/>
+    </linearGradient>
+    <linearGradient id="belly" x1="0" y1="0" x2="0.8" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#dceeff"/>
+    </linearGradient>
+  </defs>
+  <!-- bold outer silhouette: head, beak, back, body and feet -->
+  <path d="M70 12c17-7 35 0 44 15l43 18-38 8c13 20 18 46 18 74 0 35-8 62-25 84l-12 17H58l-14-18c-18-24-28-53-28-84 0-32 9-59 25-83C50 28 58 17 70 12Z" fill="url(#body)" stroke="#76ceff" stroke-width="6" stroke-linejoin="round"/>
+  <!-- beak and face break -->
+  <path d="M113 27 157 45l-39 8c-5-10-7-17-5-26Z" fill="#e83d49" stroke="#76ceff" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M107 35c-8 3-14 10-16 20" fill="none" stroke="#76ceff" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="116" cy="26" r="5" fill="#ffffff"/>
+  <circle cx="117" cy="26" r="2.2" fill="#10235c"/>
+  <!-- white belly gives the mark its recognizable penguin read -->
+  <path d="M91 66c15 21 21 49 20 78-1 26-8 48-20 66H65c-12-21-17-44-16-69 1-28 8-53 20-73 6-8 14-9 22-2Z" fill="url(#belly)" stroke="#4359ef" stroke-width="4.5"/>
+  <!-- expressive left wing -->
+  <path d="M48 74c-16 20-27 47-29 72-1 12 1 20 6 22 6 1 16-12 22-27 7-17 10-35 11-54" fill="#2649c8" stroke="#76ceff" stroke-width="5" stroke-linejoin="round"/>
+  <!-- right wing -->
+  <path d="M119 86c13 16 23 37 28 60 3 13 2 20-3 22-6 1-15-10-22-24-8-16-12-33-13-49" fill="#2649c8" stroke="#76ceff" stroke-width="5" stroke-linejoin="round"/>
+  <!-- simple feet -->
+  <path d="M52 210h30M94 210h30" fill="none" stroke="#e83d49" stroke-width="6" stroke-linecap="round"/>
+</svg>
